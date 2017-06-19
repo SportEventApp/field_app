@@ -1,4 +1,4 @@
-package org.field.api.controller;
+package org.fmarin.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

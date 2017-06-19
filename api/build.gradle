@@ -29,6 +29,16 @@ dependencies {
         exclude module: "spring-boot-starter-tomcat"
     }
     compile("org.springframework.boot:spring-boot-starter-jetty")
+
+    compile("org.springframework.boot:spring-boot-starter-data-jpa") {
+        exclude module: "tomcat-jdbc"
+    }
+
+    compile group: 'org.postgresql', name: 'postgresql', version: '42.1.1'
+    compile group: 'org.flywaydb', name: 'flyway-core', version: '4.2.0'
+    compile group: 'com.zaxxer', name: 'HikariCP', version: '2.6.3'
+
+
     // end::jetty[]
     // tag::actuator[]
     compile("org.springframework.boot:spring-boot-starter-actuator")

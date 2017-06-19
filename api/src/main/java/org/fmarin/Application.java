@@ -1,4 +1,4 @@
-package org.field.api;
+package org.fmarin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
