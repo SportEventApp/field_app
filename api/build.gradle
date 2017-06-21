@@ -36,6 +36,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-jetty")
     // end::jetty[]
 
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools'
+
     compile("org.springframework.boot:spring-boot-starter-data-jpa") {
         exclude module: "tomcat-jdbc"
     }
@@ -51,4 +53,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator")
     // end::actuator[]
     testCompile("org.springframework.boot:spring-boot-starter-test")
+}
+
+tasks.withType(org.springframework.boot.gradle.run.BootRunTask) {
+    bootRun.systemProperties = System.properties
 }
